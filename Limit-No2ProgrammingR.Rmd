@@ -1,0 +1,55 @@
+---
+title: "R Notebook"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r}
+library(Ryacas0)
+
+x = Sym("x")
+h = Sym("h")
+
+```
+#Find the solutions of the following limit problems manually and using R!
+#A)
+$$
+\lim_{x \to 2} (8-3x+12x^{2})
+$$
+```{r}
+Limit((8 - 3*x + 12*x^2),x,2)
+```
+
+
+
+#B
+$$
+\lim_{x \to Infinity} ((x^2+5*x+10)/(3*x^2-6*x-2))
+$$
+```{r}
+Limit((x^2+5*x+10)/(3*x^2-6*x-2),x,Infinity)
+```
+
+
+
+#C
+$$
+\lim_{h \to 0}((6+h)^2-36)/(h)
+$$
+```{r}
+Limit(((6+h)^2-36)/(h),h ,0)
+
+```
+
+
+
+#D
+$$
+\lim_{x \to 0} x/(3-sqrt(x+9))
+$$
+
+```{r}
+Limit((x)/(3-sqrt(x+9)),x,0)
+```
+
